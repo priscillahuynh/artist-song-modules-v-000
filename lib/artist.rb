@@ -8,10 +8,6 @@ class Artist
 
   @@artists = []
 
-  # def self.find_by_name(name)
-  #   @@artists.detect{|a| a.name == name}
-  # end
-
   def initialize
     @@artists << self
     @songs = []
@@ -29,9 +25,4 @@ class Artist
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
-
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
-
 end
